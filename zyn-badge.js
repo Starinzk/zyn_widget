@@ -3,17 +3,17 @@
   container.style.position = 'fixed';
   container.style.top = '50%';
   container.style.left = '50%';
-  container.style.transform = 'translate(-50%, -50%) scale(2.5)';
+  container.style.transform = 'translate(-50%, -50%) scale(1.8)'; // slightly less big
   container.style.zIndex = '9999';
-  container.style.padding = '24px 28px';
+  container.style.padding = '20px 24px';
   container.style.background = '#fff';
-  container.style.borderRadius = '20px';
-  container.style.boxShadow = '0 6px 30px rgba(0,0,0,0.3)';
+  container.style.borderRadius = '16px';
+  container.style.boxShadow = '0 6px 24px rgba(0,0,0,0.2)';
   container.style.display = 'flex';
   container.style.alignItems = 'center';
-  container.style.gap = '16px';
+  container.style.gap = '14px';
   container.style.fontFamily = 'sans-serif';
-  container.style.fontSize = '20px';
+  container.style.fontSize = '18px';
   container.style.opacity = '0';
   container.style.transition = 'all 0.6s ease';
 
@@ -23,8 +23,8 @@
   video.loop = true;
   video.muted = true;
   video.playsInline = true;
-  video.style.height = '80px';
-  video.style.borderRadius = '12px';
+  video.style.height = '60px'; // slightly smaller
+  video.style.borderRadius = '10px';
   video.style.transition = 'height 0.6s ease';
 
   const text = document.createElement('span');
@@ -35,12 +35,12 @@
   container.appendChild(text);
   document.body.appendChild(container);
 
-  // Fade in with delay
+  // Fade in
   setTimeout(() => {
     container.style.opacity = '1';
   }, 200);
 
-  // Shrink and move after 2.5s
+  // Shrink and dock after 2.5s
   setTimeout(() => {
     container.style.top = '';
     container.style.left = '';
